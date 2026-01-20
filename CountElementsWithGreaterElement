@@ -1,0 +1,30 @@
+// Q)given an array count number of elements having at least one element greater than itself.
+// description :
+// given :-n array elements .
+// find :- count no. of elements greater than itself.
+        // example :- arr[]=5,6,-1,8,9
+        // pseudo code:-
+        // 1)iterate and find the max element from the array.
+        // 2) itrate and get the no. of elements and that are not equals to max.
+        // 3)increment the count.
+public class day1 {
+    public static void main(String[] args) {
+    int arr[]={5,6,-1,8,9};
+    int n =arr.length;
+    int max = arr[0];
+    for (int i =1 ; i<n;i++){
+        if (arr[i]>max){
+            max=arr[i];
+        }
+    }
+    int count =0;
+    for (int i =0 ; i <n ; i ++){
+        if(arr[i]!=max){
+            count++;
+        }
+
+    }
+        System.out.println(count);
+               
+    }
+}
